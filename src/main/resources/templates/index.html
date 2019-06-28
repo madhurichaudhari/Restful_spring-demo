@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins" align="center">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Edit product Info</h2>
+                   <form method="POST" action="#"  th:action="@{/showall}"  th:object="${product}">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text"  th:field="*{id}" readonly="readonly" name="name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" th:field="*{name}"  name="email">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" th:field="*{brand}" name="phone">
+                        </div>
+						 <div class="input-group">
+                            <input class="input--style-3" type="text" th:field="*{price}"  name="email">
+                        </div>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
